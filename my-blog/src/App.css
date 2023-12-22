@@ -3,14 +3,25 @@ body {
   font-size: 18px;
 }
 
-button {
-  padding: 16px;
+.title-center {
+  text-align: center;
+  font-size: 35px;
+}
+
+nav button,
+#add-comment-form button {
+  padding: 12px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
   background-color: black;
   color: white;
   border-radius: 8px;
   cursor: pointer;
+  margin-top: 3px;
+}
+
+#add-comment-form button {
+  background-color: rgb(32, 55, 17);
 }
 
 h3,
@@ -24,7 +35,7 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background: white;
+  background: rgba(255, 195, 44, 0.765);
 }
 
 nav ul {
@@ -51,6 +62,12 @@ nav a:hover {
   color: white;
 }
 
+.nav-right {
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
 #page-body {
   max-width: 700px;
   margin: auto;
@@ -69,7 +86,6 @@ nav a:hover {
 }
 
 #add-comment-form {
-  border-bottom: 2px solid red;
   padding: 16px;
 }
 
@@ -77,12 +93,11 @@ nav a:hover {
   margin-bottom: 16px;
 }
 
-#add-comment-form,
-input,
-textarea {
+#add-comment-form input,
+#add-comment-form textarea {
   display: block;
-  width: 300px;
   padding: 8px;
+  width: 300px;
   border-radius: 8px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, Geneva, Tahoma, sans-serif;
   font-size: 18px;
@@ -90,16 +105,25 @@ textarea {
   margin-bottom: 16px;
 }
 
-#add-comment-form button {
-  width: 320px;
+.upvotes-section button {
+  width: 150px;
+  padding: 6px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  background-color: rgb(32, 55, 17);
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 0;
 }
 
-#upvotes-section button p {
+.upvotes-section button,
+p {
   display: inline-block;
   margin-right: 16px;
 }
 
 .comment {
-  border-bottom: 2px solid green;
+  border-bottom: 1px solid rgb(32, 55, 17);
   padding: 16px;
 }

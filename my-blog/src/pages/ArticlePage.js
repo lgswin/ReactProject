@@ -56,7 +56,7 @@ const ArticlePage = () => {
   return (
     <>
       <h1>{article.title}</h1>
-      <div className="upvote-section">
+      <div className="upvotes-section">
         {user ? (
           <button onClick={addUpvote}>
             {canUpvote ? "Upvote" : "Already Upvoted"}
