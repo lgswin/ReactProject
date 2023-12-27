@@ -23,27 +23,35 @@ export default function Accordion() {
     setMultiple(cpyMultiple);
   }
 
+  function handleEnabledMultiSelection() {
+    setEnableMultiSelection(!enalbleMultiSelection);
+    setSelected(null);
+    setMultiple([]);
+  }
+
+  function showToggle(dataItemId, a, b) {
+    const isSelected = enalbleMultiSelection
+      ? multiple.indexOf(dataItemId) !== -1
+      : selected === dataItemId;
+
+    if (isSelected) return a;
+    else return b;
+    //    return <span>{isSelected ? "-" : "+"}</span>;
+  }
+
   return (
     <div className="wrapper">
-      <button onClick={() => setEnableMultiSelection(!enalbleMultiSelection)}>
+      <button onClick={() => handleEnabledMultiSelection()}>
         {enalbleMultiSelection
           ? "Disable Multi selection"
           : "Enable Multi selection"}
       </button>
-      <div classNmae="accordion">
+      <div className="accordion">
         {data && data.length > 0 ? (
           data.map((dataItem) => (
             <div
               className={`item 
-              ${
-                enalbleMultiSelection
-                  ? multiple.indexOf(dataItem.id) !== -1
-                    ? "item-bottom-right"
-                    : ""
-                  : selected === dataItem.id
-                  ? "item-bottom-right"
-                  : ""
-              }
+              ${showToggle(dataItem.id, "item-seleted", "item-unselected")}
               `}
             >
               <div
@@ -52,21 +60,12 @@ export default function Accordion() {
                     ? () => handlMultiSelection(dataItem.id)
                     : () => handleSingleSelection(dataItem.id)
                 }
-                className="title"
+                className={`title 
+              ${showToggle(dataItem.id, "item-seleted", "item-unselected")}
+              `}
               >
                 <h3>{dataItem.question}</h3>
-
-                {enalbleMultiSelection ? (
-                  multiple.indexOf(dataItem.id) !== -1 ? (
-                    <span>-</span>
-                  ) : (
-                    <span>+</span>
-                  )
-                ) : selected === dataItem.id ? (
-                  <span>-</span>
-                ) : (
-                  <span>+</span>
-                )}
+                <span>{showToggle(dataItem.id, "-", "+")}</span>
               </div>
 
               {enalbleMultiSelection
