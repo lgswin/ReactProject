@@ -5,6 +5,7 @@
   align-items: center;
   width: 600px;
   height: 450px;
+  margin: 0 auto;
 }
 
 .current-image {
@@ -52,5 +53,5 @@
 }
 
 .inactive-indicator {
-  background-color: gray;
+  background-color: #b6b5b548;
 }
