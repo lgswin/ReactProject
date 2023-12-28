@@ -37,7 +37,6 @@ export default function RandomColor() {
         height: "100vh",
         background: color,
       }}
-      className="container"
     >
       <form>
         Select a color type
