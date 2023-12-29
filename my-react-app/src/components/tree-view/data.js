@@ -5,19 +5,19 @@ export const menus = [
   },
   {
     label: "Profile",
-    to: "/profile",
+    to: "",
     children: [
       {
         label: "Details",
-        to: "details",
+        to: "",
         children: [
           {
             label: "Location",
-            to: "location",
+            to: "",
             children: [
               {
                 label: "City",
-                to: "city",
+                to: "//www.google.com", // "//" absolute path, which means it open the path alone, if not, it will be a relative path.
               },
             ],
           },
@@ -27,23 +27,23 @@ export const menus = [
   },
   {
     label: "Settings",
-    to: "/settings",
+    to: "",
     children: [
       {
         label: "Account",
-        to: "account",
+        to: "",
       },
       {
         label: "Security",
-        to: "security",
+        to: "",
         children: [
           {
             label: "Login",
-            to: "login",
+            to: "",
           },
           {
             label: "Register",
-            to: "register",
+            to: "",
             children: [
               {
                 label: "Random data",

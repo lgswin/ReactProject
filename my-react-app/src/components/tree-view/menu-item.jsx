@@ -17,7 +17,14 @@ export default function MenuItem({ item }) {
   return (
     <li>
       <div className="menu-item">
-        <p>{item.label}</p>
+        {item && item.to && item.to !== "" ? (
+          <p>
+            <a href={item.to}>{item.label}</a>
+          </p>
+        ) : (
+          <p>{item.label}</p>
+        )}
+
         {item && item.children && item.children.length ? (
           <span onClick={() => handleToggleChildren(item.label)}>
             {displayCurrentChildren[item.label] ? (
