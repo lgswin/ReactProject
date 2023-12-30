@@ -1,3 +1,4 @@
+<code>
 const [userData, setUserData] = useState(null);
 -> setUserData(data);
 const [userData, setUserData] = useState(null);
@@ -18,3 +19,4 @@ created_at,
   const res = await fetch(`https://api.github.com/users/${userName}`);
   const data = await res.json();
   console.log(data);
+  </code>
