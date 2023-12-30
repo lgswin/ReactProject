@@ -1,0 +1,63 @@
+.modal {
+  position: fixed;
+  z-index: 1;
+  padding-top: 150px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #79da6cb8;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid red;
+  width: 80%;
+  animation-name: animationModal;
+  animation-duration: 0.5s;
+}
+
+.header {
+  padding: 4px 16px;
+  background-color: #5cb85c;
+  color: white;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-modal-icon {
+  cursor: pointer;
+  font-size: 40px;
+  font-weight: bold;
+  position: absolute; /* Position it absolutely within the header */
+  right: 16px; /* Adjust the left position as needed */
+}
+
+.body {
+  padding: 2px 15px;
+  height: 200px;
+}
+
+.footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: #fff;
+}
+
+@keyframes animationModal {
+  from {
+    top: -200px;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
